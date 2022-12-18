@@ -12,7 +12,8 @@ import {
 } from "react-native";
 
 import { AppLoading } from "expo";
-
+import { LoginScreen } from "./Screens/LoginScreen";
+import { Registration } from "./Screens/RegistrationScreen";
 
 // import * as Font from "expo-font";
 // const loadFonts = async () => {
@@ -41,28 +42,31 @@ export default function App() {
   // }
 
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <View style={styles.container}>
-        <KeyboardAvoidingView
-          behavior={Platform.OS == "ios" ? "padding" : "height"}
-        >
-          <TextInput
-            value={name}
-            onChangeText={nameHandler}
-            placeholder="Username"
-            style={styles.input}
-          />
-          <TextInput
-            value={password}
-            onChangeText={passwordHandler}
-            placeholder="Password"
-            secureTextEntry={true}
-            style={styles.input}
-          />
-          <Button title={"Login"} style={styles.input} onPress={onLogin} />
-        </KeyboardAvoidingView>
-      </View>
-    </TouchableWithoutFeedback>
+    <View>
+      <LoginScreen></LoginScreen>
+    </View>
+    // <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+    //   <View style={styles.container}>
+    //     <KeyboardAvoidingView
+    //       behavior={Platform.OS == "ios" ? "padding" : "height"}
+    //     >
+    //       <TextInput
+    //         value={name}
+    //         onChangeText={nameHandler}
+    //         placeholder="Username"
+    //         style={styles.input}
+    //       />
+    //       <TextInput
+    //         value={password}
+    //         onChangeText={passwordHandler}
+    //         placeholder="Password"
+    //         secureTextEntry={true}
+    //         style={styles.input}
+    //       />
+    //       <Button title={"Login"} style={styles.input} onPress={onLogin} />
+    //     </KeyboardAvoidingView>
+    //   </View>
+    // </TouchableWithoutFeedback>
   );
 }
 
