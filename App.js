@@ -13,7 +13,7 @@ import {
 
 import { AppLoading } from "expo";
 import { LoginScreen } from "./Screens/LoginScreen";
-import { Registration } from "./Screens/RegistrationScreen";
+import { Registration, RegistrationScreen } from "./Screens/RegistrationScreen";
 
 // import * as Font from "expo-font";
 // const loadFonts = async () => {
@@ -43,6 +43,7 @@ export default function App() {
 
   return (
     <View>
+      <RegistrationScreen></RegistrationScreen>
       <LoginScreen></LoginScreen>
     </View>
     // <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
